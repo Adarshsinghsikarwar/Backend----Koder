@@ -6,8 +6,6 @@ const app = express();
 app.use(
   cors({
     origin: "http://localhost:5173",
-    methods: ["POST"],
-    allowedHeaders: ["Content-Type"],
   }),
 ); // it mean allowed all the origin
 
@@ -24,7 +22,15 @@ app.use(
 //   cors({
 //     origin: "http://localhost:5173", // it mean  allowed the 5173 origin
 //     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+//     headers: {
+//       Authorization: "Bearer token",
+//       "Content-Type": "application/json",
+//     },
 //     allowedHeaders: ["Content-Type", "Authorization"],
+//     exposedHeaders: ["Authorization"],
+//     credentials: true,
+//     maxAge: 60,
+//     optionsSuccessStatus: 200,
 //   }),
 // );
 

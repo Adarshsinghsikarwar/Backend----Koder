@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { api } from "./api/apiConfig";
+// import { api } from "./api/apiConfig";
 
 const App = () => {
   const [data, setData] = useState("");
