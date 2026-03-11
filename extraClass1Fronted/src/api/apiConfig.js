@@ -15,7 +15,7 @@ export const api = axios.create({
   //   password: "1234"
   // },
   // responseType: "json",
-  validateStatus: function (status) {
-    return status < 500;
-  },
+  // validateStatus: function (status) {
+  //   return status < 500;
+  // },
 });

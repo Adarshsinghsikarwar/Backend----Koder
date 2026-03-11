@@ -8,6 +8,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background-color: #c5c7b6;
 }
 
 html {
@@ -15,16 +16,109 @@ html {
 }
 
 .main-page {
-  padding-inline: 2rem;
+  padding-inline: 2.5rem;
   padding-block: 3rem;
+}
+.main-page .note-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+.main-page .note-form h2 {
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+  font-size: 1.5rem;
+}
+.main-page .note-form .form-group {
+  margin-bottom: 1.25rem;
+}
+.main-page .note-form .form-group input,
+.main-page .note-form .form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid #eef0f7;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  background-color: #fafbff;
+}
+.main-page .note-form .form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.main-page .note-form .form-actions {
+  display: flex;
+  gap: 1rem;
+}
+.main-page .note-form .form-actions .btn-primary {
+  padding: 0.75rem 1.75rem;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.main-page .note-form .form-actions .btn-secondary {
+  padding: 0.75rem 1.75rem;
+  background-color: #eef0f7;
+  color: #5a5f7a;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 .main-page .notes {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 .main-page .notes .note {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #6c63ff;
+  padding: 1.25rem 1.5rem;
+  flex: 1 1 280px;
   max-width: 400px;
-  padding: 1rem;
-  flex-grow: 1;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.main-page .notes .note .button1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-page .notes .note .button1 .button2 {
+  display: flex;
+  gap: 0.5rem;
+}
+.main-page .notes .note .button1 .button2 button {
+  padding: 0.35rem 0.85rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: #ede9fe;
+  color: #6c63ff;
+}
+.main-page .notes .note h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+.main-page .notes .note p {
+  font-size: 0.9rem;
+  color: #5a5f7a;
+  line-height: 1.6;
 }/*# sourceMappingURL=global.css.map */
