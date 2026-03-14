@@ -1,4 +1,4 @@
-import ImageKit from "@imagekit/nodejs";
+import ImageKit, { toFile } from "@imagekit/nodejs";
 import { randomUUID } from "crypto";
 import { config } from "../config/config.js";
 import fs from "fs";
@@ -8,13 +8,12 @@ const imagekit = new ImageKit({
   urlEndpoint: config.IMAGEKIT_URL_ENDPOINT,
 });
 
-async function uploadFile(file) {
-  console.log(file);
+async function uploadFile(buffer, originalname) {
+  console.log(buffer, originalname);
   try {
-
     const result = await imagekit.files.upload({
-      // file: await toFile(file.buffer, file.originalname),
-      file: fs.createReadStream(file.path),
+      file: await toFile(buffer, originalname),
+      //file: fs.createReadStream(file.path),
       fileName: randomUUID(),
     });
 
