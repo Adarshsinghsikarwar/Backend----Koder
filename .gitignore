@@ -1,3 +1,4 @@
 .env
 node_modules
-infoText.txt
+infoText.md
+mongo.md

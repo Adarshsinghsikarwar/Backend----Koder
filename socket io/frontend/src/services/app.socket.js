@@ -1,5 +1,3 @@
-import { use } from "react";
-import { useCallback } from "react";
 import { io } from "socket.io-client";
 
 let socket;
@@ -14,5 +12,5 @@ export const addListener = (event, callback) => {
 };
 
 export const emitEvent = (event, msg) => {
-  socket.emit(event, msg);  
+  socket.emit(event, msg);
 };

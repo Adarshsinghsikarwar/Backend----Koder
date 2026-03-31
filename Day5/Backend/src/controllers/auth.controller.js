@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 
 export async function register(req, res) {
   const { name, email, password } = req.body;
+
   const user = await userModel.create({
     name,
     email,
