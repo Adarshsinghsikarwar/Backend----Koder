@@ -32,7 +32,7 @@ io.on("connection", (socket) => {
     const user = users[data.socket.id];
 
     if (!user) return;
-    io.to(room).emit("recieve", {
+    io.to(room).emit("recieve-message", {
       username: user.username,
       message: data,
     });
