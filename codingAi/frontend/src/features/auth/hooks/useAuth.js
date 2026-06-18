@@ -9,12 +9,10 @@ export function useAuth() {
     try {
       dispatch(setLoading(true));
       const data = await register({ email, username, password });
-      return data;
     } catch (error) {
       dispatch(
         setError(error.response?.data?.message || "Registration failed")
       );
-      return null;
     } finally {
       dispatch(setLoading(false));
     }
@@ -25,10 +23,8 @@ export function useAuth() {
       dispatch(setLoading(true));
       const data = await login({ email, password });
       dispatch(setUser(data.user));
-      return data;
     } catch (err) {
       dispatch(setError(err.response?.data?.message || "Login failed"));
-      return null;
     } finally {
       dispatch(setLoading(false));
     }

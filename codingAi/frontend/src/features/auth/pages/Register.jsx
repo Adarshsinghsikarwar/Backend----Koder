@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
-import { useAuth } from "../hooks/useAuth";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { handleRegister } = useAuth();
 
-  const submitForm = async (event) => {
+  const submitForm = (event) => {
     event.preventDefault();
 
     const payload = {
@@ -17,8 +15,7 @@ const Register = () => {
       password,
     };
 
-    const data = await handleRegister({ username, email, password });
-    console.log("Register data:", data);
+    console.log("Register payload:", payload);
   };
 
   return (

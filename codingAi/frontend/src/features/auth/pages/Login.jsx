@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../hook/useAuth";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router";
 
@@ -23,11 +23,8 @@ const Login = () => {
       password,
     };
 
-    const data = await handleLogin(payload);
-
-    if (data) {
-      navigate("/");
-    }
+    await handleLogin(payload);
+    navigate("/");
   };
 
   if (!loading && user) {
