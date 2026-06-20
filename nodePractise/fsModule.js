@@ -1,9 +1,8 @@
 // import fs from "fs";
 
 // Read a file
-// const data = fs.readFileSync('hello.txt', 'utf8' , (err) => {
-//   if (err) throw err;
-// })
+// const data = fs.readFileSync('hello.txt', 'utf8')
+// console.log(data);
 
 // console.log('File content:', data);
 
