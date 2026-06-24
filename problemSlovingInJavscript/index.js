@@ -28,7 +28,7 @@ const prompt = require("prompt-sync")();
 // const concatenatedArr = arr.concat([1, 2, 3]);
 // console.log(concatenatedArr);
 
-// String 
+// String
 
 // const str = "Hello, World!";
 // console.log(str.length);
@@ -47,10 +47,8 @@ const prompt = require("prompt-sync")();
 // console.log("hello" + " " + "world");
 // console.log("A".charCodeAt(0)); // 65
 
-
 // let asciiVlaue = "a";
 // console.log(asciiVlaue);
-
 
 // Hashing
 
@@ -84,20 +82,59 @@ const prompt = require("prompt-sync")();
 //     console.log(values);
 // }
 
-// math part 
+// math part
 
-Math.floor(4.7); // 4
-Math.ceil(4.2); // 5
-Math.round(4.5);
-Math.max(1, 2, 3, 4, 5);
-Math.min(1, 2, 3, 4, 5);
-Math.random();
-Math.pow(2, 3); // 8
-Math.sqrt(16);
-Math.abs(-5); // 5
+// Math.floor(4.7); // 4
+// Math.ceil(4.2); // 5
+// Math.round(4.5);
+// Math.max(1, 2, 3, 4, 5);
+// Math.min(1, 2, 3, 4, 5);
+// Math.random();
+// Math.pow(2, 3); // 8
+// Math.sqrt(16);
+// Math.abs(-5); // 5
 
-Number.MAX_SAFE_INTEGER; // 9007199254740991
-Number.MIN_SAFE_INTEGER;
+// Number.MAX_SAFE_INTEGER; // 9007199254740991
+// Number.MIN_SAFE_INTEGER;
 
--Infinity; // -Infinity
-Infinity; // Infinity
+// -Infinity; // -Infinity
+// Infinity; // Infinity
+//  ?? console.log("Hello");
+
+// console.log(this); // window or global object
+
+// function myfunction() {
+//   console.log(this);
+// }
+
+// myfunction(); // window in non-strict mode
+// undefined in strict mode
+
+// let obj = {
+//   name: "Adarsh",
+//   greet: function () {
+//     console.log("Hello" + " " + this.name);
+//   },
+// };
+
+// obj.greet(); // Hello Adarsh
+
+// let obj = {
+//   name: "Adarsh",
+//   greet: () => {
+//     console.log("Hello" + " " + this.name)
+//   },
+// };
+
+// obj.greet() // arrow function take value from it parent so there the output will be undefined
+
+
+// const user = {
+//     name: "Adarsh",
+//     greet() {
+//         console.log(this.name);
+//     }
+// };
+
+// const fn = user.greet;
+// fn();
